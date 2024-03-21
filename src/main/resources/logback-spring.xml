@@ -2,4 +2,10 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"></include>
     <include resource="logback-spring-${spring.profiles.active}.xml"></include>
+
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
 </configuration>
